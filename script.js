@@ -1,8 +1,6 @@
 const h1 = document.querySelector("h1");
 const h2 = document.querySelector(".art-title");
 
-const input = document.querySelector("input");
-
 const buttons = document.querySelectorAll("button");
 
 function handleClick(event) {
@@ -30,3 +28,7 @@ buttons.forEach(
     );
   }
 );
+
+document.querySelector("input").addEventListener("input", function (event) {
+  h1.style.setProperty("--color", event.target.value);
+});
