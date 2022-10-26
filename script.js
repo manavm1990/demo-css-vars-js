@@ -11,10 +11,17 @@ function handleClick(event) {
   if (event.target.id === "increase") {
     h2.style.setProperty("--font-size", currentFontSize + 0.5 + "em");
   } else {
+    // decrease
     h2.style.setProperty("--font-size", currentFontSize - 0.5 + "em");
   }
 }
 
+// Loop over buttons and add event listener to each individual button
 buttons.forEach(function (button) {
-  button.addEventListener("click", handleClick);
+  button.addEventListener(
+    "click",
+
+    // Reference the function we created above - use it for each button
+    handleClick
+  );
 });
